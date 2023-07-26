@@ -1,0 +1,50 @@
+@import '/styles/mixins';
+@import '/styles/fonts';
+@import '/styles/variables';
+
+.header {
+    background-image: linear-gradient($cover, $cover),
+        url('../../public/jpg/headBackground.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+    display: flex;
+    margin: -8px;
+
+    h1 {
+        margin: 8rem 1rem 1rem 1rem;
+        color: white;
+    }
+
+    .inputSection {
+        margin: 8rem 1rem 1rem 85rem;
+
+        input {
+            padding: 10px;
+            border-radius: 24px;
+            border: solid $cover 2px;
+            background-color: white;
+        }
+        input:focus {
+            background-color: $hoverColor;
+            outline: none;
+        }
+
+        button {
+            margin-left: 1rem;
+            padding: 10px;
+            border-radius: 24px;
+            border: solid $cover 2px;
+            background-color: white;
+        }
+        button:hover {
+            background-color: $hoverColor;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: $activeColor;
+            cursor: pointer;
+        }
+    }
+}
