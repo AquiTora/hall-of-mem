@@ -1,0 +1,17 @@
+@import '/styles/mixins';
+@import '/styles/fonts';
+@import '/styles/variables';
+
+.cards {
+    justify-content: center;
+    margin: auto;
+    width: 50vw;
+    margin-top: 2rem;
+
+    &__card {
+        display: flex;
+        background-color: $hoverColor;
+        border-radius: 24px;
+        margin-bottom: 2rem;
+    }
+}
