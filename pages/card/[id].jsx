@@ -11,7 +11,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps( {params }) {
+export async function getStaticProps({ params }) {
     const postData = await getPersonData(params.id);
 
     console.log('postData', postData);

@@ -32,8 +32,8 @@ let personAPI = {
             key: 5, 
             id: "Lonk",
             title: "Лонк", 
-            content: "Неизвестный брат близнец небезызвестного Линка. Очень на него похож, однако только внешне. Внутренне не отличается особым умом и сообразительностью.",
-            photos: ["/jpg/test1.jpg", "/jpg/test2.jpg", "/jpg/test3.jpeg"]
+            content: "Неизвестный брат близнец небезызвестного Линка. Очень на него похож, однако только внешне. Внутренне не отличается особым умом и сообразительностью. Родом из Пенсильвании",
+            photos: ["/png/lonk.png", "/jpg/test2.jpg", "/jpg/test3.jpeg"]
         },
         {
             key: 6, 
@@ -61,7 +61,7 @@ export function getAllPostIds() {
 
 export async function getPersonData(id) {
     const result = personAPI.persons.filter((person) => person.id === id);
-    
+
     return {
         id,
         ...result[0],
