@@ -7,15 +7,26 @@ const Cards = ({ cards }) => {
         <div className={styles.cards}>
             {cards.map((item) => {
                 return (
-                    <div className={styles.cards__card}>
-                        <Image 
-                            src='/jpg/test1.jpg'
-                            height={108}
-                            width={108}
-                            alt='photo'
-                        />
-                        <h1>{item.title}</h1>
-                        <p>{item.content}</p>  
+                    <div className={styles.card}>
+                        <div className={styles.card__title}>
+                            <Image 
+                                src={item.photos[0]}
+                                height={108}
+                                width={108}
+                                alt='photo'
+                            />
+                            <h1>{item.title}</h1>
+                        </div>
+
+                        <div className={styles.card__content}>
+                            <p>{item.content}</p> 
+                            <Link 
+                                href={`/card/${item.id}`}
+                            >
+                                Узнать больше
+                            </Link>
+                        </div>                        
+                        
                     </div>
                 )
             })}

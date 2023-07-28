@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Person } from "../Service/PageServive";
+import { getAllPerson } from "../Service/PageServiсe";
 import Header from "../components/Header/Header";
 import Cards from "../components/Cards/Cards";
+import Link from "next/link";
 
 export default function Index (props) {
-    const [cards, setCards] = useState(props.data.person);
+    const [cards, setCards] = useState(props.data.persons);
 
     return (
         <div>
@@ -17,7 +18,7 @@ export default function Index (props) {
 }
 
 export async function getServerSideProps() {
-    let data = await Person();
+    let data = await getAllPerson();
 
     return {
         props: {

@@ -7,11 +7,19 @@
     margin: auto;
     width: 50vw;
     margin-top: 2rem;
+}
 
-    &__card {
+.card {
+    background-color: $hoverColor;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+
+    &__title {
         display: flex;
-        background-color: $hoverColor;
-        border-radius: 24px;
-        margin-bottom: 2rem;
+
+    }
+
+    &__content {
+        font-size: 25px;
     }
 }
