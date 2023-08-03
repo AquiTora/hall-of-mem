@@ -67,30 +67,3 @@ export async function getPersonData(id) {
         ...result[0],
     };
 }
-
-export function getPageNumber() {
-    let pageNumber = Math.ceil(personAPI.persons.length / 3);
-    let pages = [];
-
-    for (let f = 0; f < pageNumber; f++) {
-        pages[f] = `page=${f + 1}`;
-    }
-
-    return pages.map((page) => {
-        return {
-            params: {
-                page: page
-            }
-        }
-    })
-
-}
-
-// export async function getPageData(page) {
-    
-
-//     return {
-//         id,
-//         ...result[0],
-//     }
-// }

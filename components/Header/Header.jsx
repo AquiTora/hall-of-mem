@@ -1,11 +1,19 @@
 import styles from './Header.module.scss';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Header = () => {
     return (
         <div className={styles.header}>
-            <h1>Зал памяти</h1>
-            
+            <div>
+                <Link href='/'>Зал памяти</Link>
+            </div>
+
+            <div>
+                <Link href='/catalog'>Каталог</Link>
+                <Link href='/registre'>Регистрация</Link>
+            </div>          
+
             <div className={styles.inputSection}>
                 <input />
                 <button>
