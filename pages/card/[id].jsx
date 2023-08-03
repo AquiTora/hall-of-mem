@@ -5,8 +5,6 @@ import Card from "../../components/Card/Card";
 export async function getStaticPaths() {
     const paths = getAllPostIds();
 
-    console.log('название страницы с персонажем', paths);
-
     return {
         paths,
         fallback: false
@@ -15,8 +13,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const postData = await getPersonData(params.id);
-
-    console.log('postData', postData);
     
     return {
         props: {

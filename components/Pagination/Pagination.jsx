@@ -2,7 +2,6 @@ import styles from './Pagination.module.scss';
 import { useRouter } from 'next/router';
 
 const Pagination = ({ pageSize, currentPage, setCurrentPage, pageIndex, setPageIndex, cardsSize }) => {
-    const router = useRouter();
     let pageNumb = Math.ceil(cardsSize / pageSize);
 
     function handleChangePageUp(currentPage, pageIndex) {
