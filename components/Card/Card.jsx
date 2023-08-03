@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Card = ({ content }) => {
-
-    console.log('content', content);
     return (
         <div>
             <Image 

@@ -6,7 +6,6 @@ import Pagination from '../Pagination/Pagination';
 
 const CardsOnPage = ({ index, pageSize, cards }) => {
     let pageCards = [];
-    console.log('chota')
 
     for (let i = 0; i < pageSize; i++) {
         pageCards.push(cards[i + index])
@@ -42,7 +41,7 @@ const CardsOnPage = ({ index, pageSize, cards }) => {
     )
 }
 
-const Cards = ({ cards }) => {
+const Cards = ({ cards, maxPage }) => {
     // Указывает на то, сколько карточек будет на одной странице
     const pageSize = 3;
     const [currentPage, setCurrentPage] = useState(1);

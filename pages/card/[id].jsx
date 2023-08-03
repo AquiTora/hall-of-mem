@@ -5,6 +5,8 @@ import Card from "../../components/Card/Card";
 export async function getStaticPaths() {
     const paths = getAllPostIds();
 
+    console.log('название страницы с персонажем', paths);
+
     return {
         paths,
         fallback: false
